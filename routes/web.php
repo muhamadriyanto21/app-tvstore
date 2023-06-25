@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProductController;
 
 
@@ -16,9 +17,9 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // Route untuk menampilkan form tambah produk
@@ -31,3 +32,4 @@ Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('da
 Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name('dashboard.update');
 // Route untuk menghapus produk
 Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete');
+Route::get('/', [FrontController::class, 'index'])->name('front.index');
