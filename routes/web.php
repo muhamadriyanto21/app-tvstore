@@ -32,4 +32,7 @@ Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('da
 Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name('dashboard.update');
 // Route untuk menghapus produk
 Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete');
-Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
+Route::post('/upload', [ProductController::class, 'upload'])->name('upload');
+

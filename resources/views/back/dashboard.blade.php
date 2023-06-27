@@ -118,7 +118,7 @@
               </div>
               <ul class="chat-list">
                 <li class="list active">
-                  <div class="profile"><img src="back/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Thomas Douglas</p>
                     <p>Available</p>
@@ -126,7 +126,7 @@
                   <small class="text-muted my-auto">19 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <div class="wrapper d-flex">
                       <p>Catherine</p>
@@ -137,7 +137,7 @@
                   <small class="text-muted my-auto">23 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Daniel Russell</p>
                     <p>Available</p>
@@ -145,7 +145,7 @@
                   <small class="text-muted my-auto">14 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <p>James Richardson</p>
                     <p>Away</p>
@@ -153,7 +153,7 @@
                   <small class="text-muted my-auto">2 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Madeline Kennedy</p>
                     <p>Available</p>
@@ -161,7 +161,7 @@
                   <small class="text-muted my-auto">5 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="back/images/faces/ryan.jpeg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Sarah Graves</p>
                     <p>Available</p>
@@ -293,34 +293,35 @@
                 $products = \App\Models\Product::all();
             @endphp
         {{-- @else --}}
-            <table class="table">
-                <thead class="thread-dark">
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($products as $product)
+            <div class="table-responsive">
+                <table class="table mr-5 ml-5 mt-5 mb-5">
+                    <thead class="thread-dark">
                         <tr>
-                            <td>{{ $product->name }}</td>
-                            <td>{{ $product->description }}</td>
-                            <td>{{ $product->price }}</td>
-                            <td>
-                                <a href="{{ route('dashboard.edit', [$product->id]) }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                {{-- <a href="{{ route('dashboard.detail') }}" class="btn btn-warning">Detail</a> --}}
-                                <form action="{{ route('dashboard.delete', $product->id) }}" method="POST" style="display: inline-block">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></button>
-                                </form>
-                            </td>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Action</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach ($products as $product)
+                            <tr>
+                                <td>{{ $product->name }}</td>
+                                <td>{{ $product->description }}</td>
+                                <td>{{ $product->price }}</td>
+                                <td>
+                                    <a href="{{ route('dashboard.edit', [$product->id]) }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <form action="{{ route('dashboard.delete', $product->id) }}" method="POST" style="display: inline-block">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         {{-- @endif --}}
         </div>
     </div>
