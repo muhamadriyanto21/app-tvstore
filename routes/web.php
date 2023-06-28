@@ -32,7 +32,15 @@ Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('da
 Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name('dashboard.update');
 // Route untuk menghapus produk
 Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete');
-Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
-Route::post('/upload', [ProductController::class, 'upload'])->name('upload');
-
+Route::get('/category', [FrontController::class, 'category'])->name('front.category');
+Route::get('/singleproduct', [FrontController::class, 'singleproduct'])->name('front.single-product');
+Route::get('/checkout', [FrontController::class, 'checkout'])->name('front.checkout');
+Route::get('/cart', [FrontController::class, 'cart'])->name('front.cart');
+Route::get('/confirmation', [FrontController::class, 'confirmation'])->name('front.confirmation');
+Route::get('/blog', [FrontController::class, 'blog'])->name('front.blog');
+Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.single-blog');
+Route::get('/login', [FrontController::class, 'login'])->name('front.login');
+Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
+Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
