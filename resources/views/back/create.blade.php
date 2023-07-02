@@ -301,10 +301,10 @@
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" class="form-control" required></textarea>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="file">Uploud Gambar:</label>
-                        <input type="file" name="image" id="image" class="form-control">
-                    </div> --}}
+                        <input type="file" name="foto" id="foto" class="form-control">
+                    </div>
                     <button type="submit" class="btn btn-primary">Create</button>
                 </form>
             </div>

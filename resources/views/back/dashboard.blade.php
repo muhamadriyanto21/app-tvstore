@@ -298,6 +298,7 @@
                     <thead class="thread-dark">
                         <tr>
                             <th>Name</th>
+                            <th>Image</th>
                             <th>Description</th>
                             <th>Price</th>
                             <th>Action</th>
@@ -307,6 +308,9 @@
                         @foreach ($products as $product)
                             <tr>
                                 <td>{{ $product->name }}</td>
+                                <td>
+                                    <img src="{{ asset('fotoproduct/'.$product->foto) }}" alt="">
+                                </td>
                                 <td>{{ $product->description }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>

@@ -28,7 +28,12 @@ class ProductController extends Controller
             // tambahkan validasi lain yang diperlukan
         ]);
 
-        Product::create($request->all());
+        $data = Product::create($request->all());
+        if($request->hasFile('foto')) {
+            $request->file('foto')->move('fotoproduct/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
 
         return redirect()->route('dashboard.index')->with('success', 'Product created successfully.');
     }
@@ -59,5 +64,5 @@ class ProductController extends Controller
         return redirect()->route('dashboard.index')->with('success', 'Product deleted successfully.');
     }
 
-    
+
 }
