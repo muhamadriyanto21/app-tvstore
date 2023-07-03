@@ -10,7 +10,7 @@
 					<h1>Login</h1>
 					<nav class="d-flex align-items-center">
 						<a href="{{ route('front.home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="{{ route('front.login') }}">Login</a>
+						<a href="{{ route('front.login') }}">Register</a>
 					</nav>
 				</div>
 			</div>
@@ -26,9 +26,10 @@
 					<div class="login_box_img">
 						<img class="img-fluid" src="{{ asset('front/img/login.jpg') }}" alt="">
 						<div class="hover">
-							<h4>New to our website?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="primary-btn" href="{{ route('front.register') }}">Create an Account</a>
+							<h4>Welcome to our website</h4>
+							<p>Sudah Punya Akun ? Login Sekarang Juga</p>
+
+							<a class="primary-btn" href="{{ route('front.login') }}">Login</a>
 						</div>
 					</div>
 				</div>
@@ -39,18 +40,15 @@
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
 							</div>
+                            <div class="col-md-12 form-group">
+								<input type="Email" class="form-control" id="name" name="name" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+							</div>
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
 							</div>
 							<div class="col-md-12 form-group">
-								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
-								</div>
-							</div>
-							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="primary-btn">Log In</button>
-								<a href="#">Forgot Password?</a>
+								<button type="submit" value="submit" class="primary-btn">Buat Akun</button>
+
 							</div>
 						</form>
 					</div>

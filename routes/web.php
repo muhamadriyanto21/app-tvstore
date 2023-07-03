@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +41,8 @@ Route::get('/cart', [FrontController::class, 'cart'])->name('front.cart');
 Route::get('/confirmation', [FrontController::class, 'confirmation'])->name('front.confirmation');
 Route::get('/blog', [FrontController::class, 'blog'])->name('front.blog');
 Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.single-blog');
-Route::get('/login', [FrontController::class, 'login'])->name('front.login');
 Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
+Route::get('/login', [LoginController::class, 'login'])->name('front.login');
+Route::get('/register', [LoginController::class, 'register'])->name('front.register');
+
