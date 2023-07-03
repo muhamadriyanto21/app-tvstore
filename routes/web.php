@@ -45,4 +45,4 @@ Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.track
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::get('/register', [LoginController::class, 'register'])->name('front.register');
-
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('front.registeruser');
