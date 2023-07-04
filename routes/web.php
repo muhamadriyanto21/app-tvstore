@@ -44,5 +44,8 @@ Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.s
 Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
+Route::get('/settings', [DashboardController::class, 'settings'])->name('back.settings');
+
 Route::get('/register', [LoginController::class, 'register'])->name('front.register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('front.registeruser');

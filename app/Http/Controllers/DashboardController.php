@@ -10,4 +10,9 @@ class DashboardController extends Controller
     {
         return view('back.dashboard');
     }
+
+    public function settings()
+    {
+        return view('back.settings');
+    }
 }

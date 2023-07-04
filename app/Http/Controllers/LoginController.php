@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
     public function login()
     {
         return view('front.login');
+    }
+
+    public function loginproses(Request $request)
+    {
+        if(Auth::attempt($request->only('email','password'))) {
+            return redirect('/dashboard');
+        }
+        return redirect('/login');
     }
 
     public function register()
