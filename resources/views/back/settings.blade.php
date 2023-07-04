@@ -184,6 +184,12 @@
               </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="pages/documentation/documentation.html">
+                  <i class="icon-paper menu-icon"></i>
+                  <span class="menu-title">Daftar Pembelian</span>
+                </a>
+              </li>
+            {{-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="icon-layout menu-icon"></i>
                 <span class="menu-title">UI Elements</span>
@@ -276,7 +282,7 @@
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Documentation</span>
               </a>
-            </li>
+            </li> --}}
           </ul>
         </nav>
         <!-- partial -->
@@ -287,10 +293,10 @@
             <div class="jumbotron ml-2 mr-3 mt-4">
                 <div class="row">
                     <div class="col-lg-4 col-sm-12">
-                        <img src="{{ asset('back/images/faces/ryann.jpg') }}" class="img-thumbnail rounded" style="width: 300px; " alt="...">
+                        <img src="{{ asset('back/images/faces/ryan.jpeg') }}" class="img-thumbnail rounded" style="width: 300px; height: 300px;" alt="...">
                     </div>
                     <div class="col-7">
-                        <h2 class="mt-5">Muhamad Riyanto</h2>
+                        {{-- <h2 class="mt-5">{{ Auth::user()->name }}</h2> --}}
                         <div class="card">
                             <div class="card-header">
                                 <div class="row">
