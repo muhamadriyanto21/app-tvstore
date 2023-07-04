@@ -19,12 +19,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('front.home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('front.home') }}"><i class="fa-solid fa-house"></i>  Home</a></li>
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false">Shop</a>
+                             aria-expanded="false"><i class="fa-solid fa-cart-shopping"></i>  Shop</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.category') }}">Shop Category</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('front.category') }}"><i class="fa-solid fa-cart-shopping"></i>  Shop Category</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.single-product') }}">Product Details</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.checkout') }}">Product Checkout</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.cart') }}">Shopping Cart</a></li>
@@ -33,7 +33,7 @@
                         </li>
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false">Blog</a>
+                             aria-expanded="false"><i class="fa-solid fa-webhook"></i><i class="fa-brands fa-slack"></i>  Blog</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.blog') }}">Blog</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.single-blog') }}">Blog Details</a></li>
@@ -41,14 +41,14 @@
                         </li>
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false">Pages</a>
+                             aria-expanded="false"><i class="fa-solid fa-user"></i>  Pages</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.login') }}">Login</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.tracking') }}">Tracking</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.elements') }}">Elements</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}"><i class="fa-solid fa-address-card"></i>  Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>

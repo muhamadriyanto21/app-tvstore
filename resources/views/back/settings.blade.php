@@ -296,7 +296,7 @@
                         <img src="{{ asset('back/images/faces/ryan.jpeg') }}" class="img-thumbnail rounded" style="width: 300px; height: 300px;" alt="...">
                     </div>
                     <div class="col-7">
-                        {{-- <h2 class="mt-5">{{ Auth::user()->name }}</h2> --}}
+                        <h2 class="mt-5">{{ Auth::user()->name }}</h2>
                         <div class="card">
                             <div class="card-header">
                                 <div class="row">
