@@ -283,52 +283,58 @@
 
 
 
-
-        <div class="container mt-5 ml-5 mr-5">
-            <h1>Produk List</h1>
-            <a href="{{ route('dashboard.create') }}" class="btn btn-primary ml-2 mr-2 mt-2 mb-2">Add Product</a>
-            {{-- @if ($products->isEmpty())
-            <p>No products found.</p> --}}
-            @php
-                $products = \App\Models\Product::all();
-            @endphp
-        {{-- @else --}}
-            <div class="table-responsive">
-                <table class="table mr-5 ml-5 mt-5 mb-5">
-                    <thead class="thread-dark">
-                        <tr>
-                            <th>Name</th>
-                            <th>Image</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($products as $product)
-                            <tr>
-                                <td>{{ $product->name }}</td>
-                                <td>
-                                    <img src="{{ asset('fotoproduct/'.$product->foto) }}" alt="">
-                                </td>
-                                <td>{{ $product->description }}</td>
-                                <td>{{ $product->price }}</td>
-                                <td>
-                                    <a href="{{ route('dashboard.edit', [$product->id]) }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                    <form action="{{ route('dashboard.delete', $product->id) }}" method="POST" style="display: inline-block">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')"><i class="fa-solid fa-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+        <div class="container">
+            <div class="jumbotron ml-2 mr-3 mt-4">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12">
+                        <img src="{{ asset('back/images/faces/ryann.jpg') }}" class="img-thumbnail rounded" style="width: 300px; " alt="...">
+                    </div>
+                    <div class="col-7">
+                        <h2 class="mt-5">Muhamad Riyanto</h2>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h5>Karyawan</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="fa-solid fa-pen-to-square" style="color: #919cb1;"></i></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        {{-- @endif --}}
+
+
+            <div class="row pl-3 pr-3">
+                <div class="col-lg-3 col-sm-12">
+                    <div class="jarak ml-3">
+                        <h3>SETTINGS</h3>
+                        <h6>Account</h6>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-10 ml-3 mr-3">
+                                <h3>Account Settings</h3>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-pen-to-square" style="color: #919cb1;"></i>
+                            </div>
+                        </div>
+
+                        <div class="jarak ml-3 mr-3">
+                            <h5>Email : muhamad.riyanto2025@gmail.com</h5>
+                            <h5>Password : 123</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
 
         <!-- main-panel ends -->
