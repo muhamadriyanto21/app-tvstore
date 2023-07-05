@@ -7,12 +7,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LoginController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
-Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create')->middleware('auth');;
+Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create')->middleware('auth');
 Route::get('/settings', [DashboardController::class, 'settings'])->name('back.settings')->middleware('auth');
-Route::post('/dashboard/store', [ProductController::class, 'store'])->name('products.store')->middleware('auth');;
-Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('dashboard.edit')->middleware('auth');;
-Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name('dashboard.update')->middleware('auth');;
-Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete')->middleware('auth');;
+Route::post('/dashboard/store', [ProductController::class, 'store'])->name('products.store')->middleware('auth');
+Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('dashboard.edit')->middleware('auth');
+Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name('dashboard.update')->middleware('auth');
+Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete')->middleware('auth');
 Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 Route::get('/category', [FrontController::class, 'category'])->name('front.category');
