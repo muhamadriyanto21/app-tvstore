@@ -20,16 +20,8 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ route('front.home') }}"><i class="fa-solid fa-house"></i>  Home</a></li>
-                        <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false"><i class="fa-solid fa-cart-shopping"></i>  Shop</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.category') }}"><i class="fa-solid fa-cart-shopping"></i>  Shop Category</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.single-product') }}">Product Details</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.checkout') }}">Product Checkout</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.cart') }}">Shopping Cart</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('front.confirmation') }}">Confirmation</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a href="{{ route('front.category') }}" class="nav-link"><i class="fa-solid fa-cart-shopping"></i>  Shop</a>
                         </li>
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

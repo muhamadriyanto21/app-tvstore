@@ -15,7 +15,8 @@ class FrontController extends Controller
 
     public function category()
     {
-        return view('front.category');
+        $products = Product::all();
+        return view('front.category', compact('products'));
     }
 
     public function contact()
