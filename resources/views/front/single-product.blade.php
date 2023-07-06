@@ -25,19 +25,19 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="{{ asset('fotoproduct/'.$products->foto) }}" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="{{ asset('front/img/category/s-p1.jpg') }}" alt="">
+							<img class="img-fluid" src="{{ asset('fotoproduct/'.$products->foto) }}" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="{{ asset('front/img/category/s-p1.jpg') }}" alt="">
+							<img class="img-fluid" src="{{ asset('fotoproduct/'.$products->foto) }}" alt="">
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>Faded SkyBlu Denim Jeans</h3>
+						<h3>{{ $products->name }}</h3>
 						<h2>$149.99</h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
@@ -56,11 +56,12 @@
 						</div>
 						<div class="card_area d-flex align-items-center">
 							<a class="primary-btn" href="#">Add to Cart</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+							{{-- <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a> --}}
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -392,7 +393,7 @@
 	<!--================End Product Description Area =================-->
 
 	<!-- Start related-product Area -->
-	<section class="related-product-area section_gap_bottom">
+	{{-- <section class="related-product-area section_gap_bottom">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
@@ -525,6 +526,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End related-product Area -->
 @include('layouts.front.footer')

@@ -209,7 +209,7 @@
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" src="{{ asset('front/img/product/p1.jpg') }}" alt="">
+								<img class="img-fluid" src="{{ asset('fotoproduct/'.$item->foto) }}" alt="">
 								<div class="product-details">
 									<h6>{{ $item->name }}</h6>
 									<div class="price">
@@ -230,9 +230,9 @@
 											<span class="lnr lnr-sync"></span>
 											<p class="hover-text">compare</p>
 										</a>
-										<a href="" class="social-info">
+										<a href="{{ route('front.single-product', [$item->id]) }}" class="social-info">
 											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<p class="hover-text">Detail</p>
 										</a>
 									</div>
 								</div>

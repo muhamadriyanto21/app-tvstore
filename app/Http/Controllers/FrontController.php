@@ -24,9 +24,10 @@ class FrontController extends Controller
         return view('front.contact');
     }
 
-    public function singleproduct()
+    public function singleproduct($id)
     {
-        return view('front.single-product');
+        $products = Product::find($id);
+        return view('front.single-product', compact('products'));
     }
 
     public function checkout()

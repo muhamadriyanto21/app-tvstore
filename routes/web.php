@@ -16,7 +16,7 @@ Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->
 Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 Route::get('/category', [FrontController::class, 'category'])->name('front.category');
-Route::get('/singleproduct', [FrontController::class, 'singleproduct'])->name('front.single-product');
+Route::get('/singleproduct/{id}', [FrontController::class, 'singleproduct'])->name('front.single-product');
 Route::get('/checkout', [FrontController::class, 'checkout'])->name('front.checkout');
 Route::get('/cart', [FrontController::class, 'cart'])->name('front.cart');
 Route::get('/confirmation', [FrontController::class, 'confirmation'])->name('front.confirmation');
