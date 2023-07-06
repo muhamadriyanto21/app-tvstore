@@ -7,7 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LoginController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
-Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create')->middleware('auth');
+Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
 Route::get('/settings', [DashboardController::class, 'settings'])->name('back.settings')->middleware('auth');
 Route::post('/dashboard/store', [ProductController::class, 'store'])->name('products.store')->middleware('auth');
 Route::get('/dashboard/edit/{id}', [ProductController::class, 'edit'])->name('dashboard.edit')->middleware('auth');

@@ -177,7 +177,7 @@
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="{{ route('dashboard.index') }}">
             <i class="icon-grid menu-icon"></i>
             <span class="menu-title">Dashboard</span>
           </a>
@@ -240,7 +240,7 @@
           </a>
           <div class="collapse" id="icons">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Mdi icons</a></li>
             </ul>
           </div>
         </li>
@@ -295,11 +295,11 @@
                     </div>
                     <div class="form-group">
                         <label for="price">Price:</label>
-                        <input type="number" name="price" id="price" class="form-control" required>
+                        <input type="text" name="price" id="price" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="description">Description:</label>
-                        <textarea name="description" id="description" class="form-control" required></textarea>
+                        <textarea rows="10" name="description" id="description" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="file">Uploud Gambar:</label>

@@ -318,7 +318,7 @@
                                     <img src="{{ asset('fotoproduct/'.$product->foto) }}" alt="">
                                 </td>
                                 <td>{{ $product->description }}</td>
-                                <td>{{ $product->price }}</td>
+                                <td>Rp. {{ $product->price }}</td>
                                 <td>
                                     <a href="{{ route('dashboard.edit', [$product->id]) }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                                     <form action="{{ route('dashboard.delete', $product->id) }}" method="POST" style="display: inline-block">
