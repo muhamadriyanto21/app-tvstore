@@ -27,6 +27,8 @@ Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.track
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
 
 Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/admin/categories/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/admin/categories/store', [CategoryController::class, 'store'])->name('category.store');
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');

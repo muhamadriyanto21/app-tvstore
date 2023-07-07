@@ -6,7 +6,14 @@
             <div class="col-md-12 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">List Category</h4>
+                        <div class="card-title">
+                            <div class="d-flex justify-content-between align-items-center">
+                                List Category
+                                <a class="btn btn-primary" href="{{ route('category.create') }}">Create Category</a>
+                            </div>
+                        </div>
+
+
 
                         <div class="table-resposive">
                             <table class="table">

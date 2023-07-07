@@ -21,7 +21,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('back.category.create');
     }
 
     /**
@@ -29,7 +29,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Category::create([
+            'name' => $request->name,
+        ]);
+        return redirect()->route('category.index');
     }
 
     /**
