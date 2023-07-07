@@ -21,6 +21,7 @@
                                     <tr>
                                         <th>id</th>
                                         <th>name</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -28,6 +29,9 @@
                                         <tr>
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->name }}</td>
+                                            <td>
+                                                <a href="{{ route('category.edit', [$item->id]) }}">Edit</a>
+                                            </td>
                                         </tr>
                                     @endforeach
 

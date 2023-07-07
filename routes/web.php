@@ -29,6 +29,8 @@ Route::get('/elements', [FrontController::class, 'elements'])->name('front.eleme
 Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/admin/categories/create', [CategoryController::class, 'create'])->name('category.create');
 Route::post('/admin/categories/store', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+Route::post('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
