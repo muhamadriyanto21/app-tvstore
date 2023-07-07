@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
 Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
@@ -24,10 +25,11 @@ Route::get('/blog', [FrontController::class, 'blog'])->name('front.blog');
 Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.single-blog');
 Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
+
+Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.index');
+
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
-
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
-
 Route::get('/register', [LoginController::class, 'register'])->name('front.register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('front.registeruser');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
