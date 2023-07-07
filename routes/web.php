@@ -31,6 +31,7 @@ Route::get('/admin/categories/create', [CategoryController::class, 'create'])->n
 Route::post('/admin/categories/store', [CategoryController::class, 'store'])->name('category.store');
 Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
 Route::post('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
+Route::get('/admin/categories/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');

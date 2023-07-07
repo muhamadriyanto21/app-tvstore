@@ -31,6 +31,8 @@
                                             <td>{{ $item->name }}</td>
                                             <td>
                                                 <a href="{{ route('category.edit', [$item->id]) }}">Edit</a>
+
+                                                <a href="{{ route('category.delete', [$item->id]) }}">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
