@@ -33,6 +33,14 @@ Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->
 Route::post('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
 Route::get('/admin/categories/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
 
+// buat product
+Route::get('/admin/products', [ProductController::class, 'index'])->name('product.index');
+Route::get('/admin/products/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('/admin/products/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('/admin/products/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
+Route::post('/admin/products/{id}/update', [ProductController::class, 'update'])->name('product.update');
+Route::get('/admin/products/{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
+
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
 Route::get('/register', [LoginController::class, 'register'])->name('front.register');

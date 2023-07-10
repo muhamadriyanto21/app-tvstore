@@ -9,14 +9,14 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $data = Product::all();
 
-        return view('back.dashboard', compact('products'));
+        return view('back.product.index', compact('data'));
     }
 
     public function create()
     {
-        return view('back.create');
+        return view('back.product.create');
     }
 
     public function store(Request $request)
@@ -28,31 +28,35 @@ class ProductController extends Controller
             // tambahkan validasi lain yang diperlukan
         ]);
 
-        $data = Product::create($request->all());
+        $data = Product::create([
+            'name' => $request->name,
+            'price' => $request->price,
+            'description' => $request->description,
+            'foto' => 'foto.jpg',
+        ]);
         if($request->hasFile('foto')) {
             $request->file('foto')->move('fotoproduct/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 
-        return redirect()->route('dashboard.index')->with('success', 'Product created successfully.');
+        return redirect()->route('product.index');
     }
 
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('back.edit', compact('product'));
+        return view('back.product.edit', compact('product'));
     }
 
 
     public function update(Request $request, $id) {
-        // dd($request);
         Product::where('id', $id)->update([
             'name' => $request->name,
            'price' => $request->price,
            'description' => $request->description,
          ]);
-        return redirect()->route('dashboard.index');
+        return redirect()->route('product.index');
     }
 
 
@@ -61,7 +65,7 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        return redirect()->route('dashboard.index')->with('success', 'Product deleted successfully.');
+        return redirect()->route('product.index');
     }
 
 

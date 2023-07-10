@@ -226,10 +226,10 @@
 											<span class="lnr lnr-heart"></span>
 											<p class="hover-text">Wishlist</p>
 										</a>
-										<a href="" class="social-info">
+										{{-- <a href="" class="social-info">
 											<span class="lnr lnr-sync"></span>
 											<p class="hover-text">compare</p>
-										</a>
+										</a> --}}
 										<a href="{{ route('front.single-product', [$item->id]) }}" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">Detail</p>
