@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PromoController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
 Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
@@ -26,6 +27,7 @@ Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.s
 Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
 
+// fitur crud category
 Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/admin/categories/create', [CategoryController::class, 'create'])->name('category.create');
 Route::post('/admin/categories/store', [CategoryController::class, 'store'])->name('category.store');
@@ -33,13 +35,24 @@ Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->
 Route::post('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
 Route::get('/admin/categories/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
 
-// buat product
+// fitur crud product
 Route::get('/admin/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('/admin/products/create', [ProductController::class, 'create'])->name('product.create');
 Route::post('/admin/products/store', [ProductController::class, 'store'])->name('product.store');
 Route::get('/admin/products/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::post('/admin/products/{id}/update', [ProductController::class, 'update'])->name('product.update');
 Route::get('/admin/products/{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
+
+// fitur crud promo
+Route::get('/admin/promos', [PromoController::class, 'index'])->name('promo.index');
+Route::get('/admin/promos/create', [PromoController::class, 'create'])->name('promo.create');
+Route::get('/admin/promos/show', [PromoController::class, 'show'])->name('promo.show');
+Route::post('/admin/promos/store', [PromoController::class, 'store'])->name('promo.store');
+Route::get('/admin/promos/{id}/edit', [PromoController::class, 'edit'])->name('promo.edit');
+Route::post('/admin/promos/{id}/update', [PromoController::class, 'update'])->name('promo.update');
+Route::get('/admin/promos/{id}/delete', [PromoController::class, 'destroy'])->name('promo.delete');
+
+
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
