@@ -8,10 +8,10 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Contact Us</h1>
+					<h1>About Us</h1>
 					<nav class="d-flex align-items-center">
 						<a href="{{ route('front.home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="{{ route('front.products') }}">Contact</a>
+						<a href="{{ route('front.contact') }}">Contact</a>
 					</nav>
 				</div>
 			</div>

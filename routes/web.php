@@ -17,6 +17,7 @@ Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name
 Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete')->middleware('auth');
 Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
+Route::get('/aboutus', [FrontController::class, 'aboutus'])->name('front.aboutus');
 Route::get('/products', [FrontController::class, 'products'])->name('front.products');
 Route::get('/singleproduct/{id}', [FrontController::class, 'singleproduct'])->name('front.single-product');
 Route::get('/checkout', [FrontController::class, 'checkout'])->name('front.checkout');

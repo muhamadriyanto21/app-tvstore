@@ -31,6 +31,15 @@
 	<link rel="stylesheet" href="{{ asset('front/css/ion.rangeSlider.skinFlat.css') }}" />
 	<link rel="stylesheet" href="{{ asset('front/css/magnific-popup.css') }}">
 	<link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
+    {{-- my css for change mobile size navbar --}}
+    <style>
+        @media (max-width: 767px) {
+            .navbar {
+                padding-top: 20px !important;
+                padding-bottom: 20px !important;
+            }
+        }
+        </style>
 </head>
 
 <body>
@@ -42,7 +51,7 @@
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
     <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light main_box">
+        <nav class="navbar navbar-expand-lg navbar-light main_box pl-0">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <a class="navbar-brand logo_h" href="{{ route('front.home') }}">TV Store</a>
@@ -76,13 +85,13 @@
                                 <li class="nav-item"><a class="nav-link" href="{{ route('front.elements') }}">Elements</a></li>
                             </ul>
                         </li> --}}
-                        <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}"><i class="fa-solid fa-address-card"></i>  About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('front.aboutus') }}"><i class="fa-solid fa-address-card"></i>  About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}"><i class="fa-solid fa-address-card"></i>  Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {{-- <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li> --}}
                         <li class="nav-item">
-                            <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+                            <a title="Login" href="{{ route('front.login') }}"><span class="fa-solid fa-user"></span></a>
                         </li>
                     </ul>
                 </div>

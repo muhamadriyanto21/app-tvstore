@@ -68,5 +68,14 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
 
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $results = Product::where('column', 'LIKE', '%' . $query . '%')->get();
+
+        return view('search-results', compact('results'));
+    }
+
 
 }

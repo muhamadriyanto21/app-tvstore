@@ -24,6 +24,12 @@ class FrontController extends Controller
         return view('front.contact');
     }
 
+
+    public function aboutus()
+    {
+        return view('front.aboutus');
+    }
+
     public function singleproduct($id)
     {
         $products = Product::find($id);
