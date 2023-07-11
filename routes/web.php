@@ -17,7 +17,7 @@ Route::put('/dashboard/update/{id}', [ProductController::class, 'update'])->name
 Route::delete('/dashboard/delete/{id}', [ProductController::class, 'destroy'])->name('dashboard.delete')->middleware('auth');
 Route::get('/', [FrontController::class, 'index'])->name('front.home');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
-Route::get('/category', [FrontController::class, 'category'])->name('front.category');
+Route::get('/products', [FrontController::class, 'products'])->name('front.products');
 Route::get('/singleproduct/{id}', [FrontController::class, 'singleproduct'])->name('front.single-product');
 Route::get('/checkout', [FrontController::class, 'checkout'])->name('front.checkout');
 Route::get('/cart', [FrontController::class, 'cart'])->name('front.cart');
@@ -27,6 +27,7 @@ Route::get('/singleblog', [FrontController::class, 'singleblog'])->name('front.s
 Route::get('/tracking', [FrontController::class, 'tracking'])->name('front.tracking');
 Route::get('/elements', [FrontController::class, 'elements'])->name('front.elements');
 
+Route::middleware(['auth'])->group(function () {
 // fitur crud category
 Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/admin/categories/create', [CategoryController::class, 'create'])->name('category.create');
@@ -34,7 +35,9 @@ Route::post('/admin/categories/store', [CategoryController::class, 'store'])->na
 Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
 Route::post('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
 Route::get('/admin/categories/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
+});
 
+Route::middleware(['auth'])->group(function () {
 // fitur crud product
 Route::get('/admin/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('/admin/products/create', [ProductController::class, 'create'])->name('product.create');
@@ -42,7 +45,9 @@ Route::post('/admin/products/store', [ProductController::class, 'store'])->name(
 Route::get('/admin/products/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::post('/admin/products/{id}/update', [ProductController::class, 'update'])->name('product.update');
 Route::get('/admin/products/{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
+});
 
+Route::middleware(['auth'])->group(function () {
 // fitur crud promo
 Route::get('/admin/promos', [PromoController::class, 'index'])->name('promo.index');
 Route::get('/admin/promos/create', [PromoController::class, 'create'])->name('promo.create');
@@ -51,11 +56,11 @@ Route::post('/admin/promos/store', [PromoController::class, 'store'])->name('pro
 Route::get('/admin/promos/{id}/edit', [PromoController::class, 'edit'])->name('promo.edit');
 Route::post('/admin/promos/{id}/update', [PromoController::class, 'update'])->name('promo.update');
 Route::get('/admin/promos/{id}/delete', [PromoController::class, 'destroy'])->name('promo.delete');
-
+});
 
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('front.loginproses');
-Route::get('/register', [LoginController::class, 'register'])->name('front.register');
-Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('front.registeruser');
+// Route::get('/register', [LoginController::class, 'register'])->name('front.register');
+// Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('front.registeruser');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

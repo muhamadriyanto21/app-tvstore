@@ -13,10 +13,10 @@ class FrontController extends Controller
         return view('front.index', compact('products'));
     }
 
-    public function category()
+    public function products()
     {
         $products = Product::all();
-        return view('front.category', compact('products'));
+        return view('front.products', compact('products'));
     }
 
     public function contact()

@@ -1,6 +1,6 @@
 @extends('layouts.front.index')
 
-@include('layouts.front.navbar')
+@section('content')
 
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
@@ -58,4 +58,4 @@
 		</div>
 	</section>
 	<!--================End Login Box Area =================-->
-@include('layouts.front.footer')
+@endsection

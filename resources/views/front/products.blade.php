@@ -1,6 +1,6 @@
 @extends('layouts.front.index')
 
-@include('layouts.front.navbar')
+@section('content')
 
 
 
@@ -15,7 +15,7 @@
 					<nav class="d-flex align-items-center">
 						<a href="{{ route('front.home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
 						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-						<a href="{{ route('front.category') }}">Sneakers Category</a>
+						<a href="{{ route('front.products') }}">Sneakers Category</a>
 					</nav>
 				</div>
 			</div>
@@ -413,4 +413,4 @@
 	</section>
 	<!-- End related-product Area -->
 
-@include('layouts.front.footer')
+@endsection

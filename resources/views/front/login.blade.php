@@ -1,6 +1,6 @@
 @extends('layouts.front.index')
 
-@include('layouts.front.navbar')
+@section('content')
 
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
@@ -28,7 +28,7 @@
 						<div class="hover">
 							<h4>New to our website?</h4>
 							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="primary-btn" href="{{ route('front.register') }}">Create an Account</a>
+							{{-- <a class="primary-btn" href="">Create an Account</a> --}}
 						</div>
 					</div>
 				</div>
@@ -41,8 +41,14 @@
 								<input type="text" class="form-control" id="name" name="email" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-							</div>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                                    <button type="button" class="btn btn-toggle-password" onclick="togglePasswordVisibility()">
+                                        <i id="toggleIcon" class="fa fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+
 							{{-- <div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
@@ -60,4 +66,4 @@
 		</div>
 	</section>
 	<!--================End Login Box Area =================-->
-@include('layouts.front.footer')
+@endsection

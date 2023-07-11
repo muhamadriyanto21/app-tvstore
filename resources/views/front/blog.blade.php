@@ -1,6 +1,6 @@
 @extends('layouts.front.index')
 
-@include('layouts.front.navbar')
+@section('content')
 
 
     <!-- Start Banner Area -->
@@ -421,4 +421,4 @@
         </div>
     </section>
     <!--================Blog Area =================-->
-    @include('layouts.front.footer')
+@endsection

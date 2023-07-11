@@ -1,6 +1,6 @@
 @extends('layouts.front.index')
 
-@include('layouts.front.navbar')
+@section('content')
 
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
@@ -169,4 +169,4 @@
     </section>
     <!--================End Checkout Area =================-->
 
-@include('layouts.front.footer')
+@endsection

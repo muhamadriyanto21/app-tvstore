@@ -5,7 +5,7 @@
 @endphp --}}
 @extends('layouts.front.index')
 
-    @include('layouts.front.navbar')
+    @section('content')
 
 <!-- start banner Area -->
 <section class="banner-area">
@@ -396,6 +396,6 @@
 
 <!-- End related-product Area -->
 
-    @include('layouts.front.footer')
+@endsection
 
 
