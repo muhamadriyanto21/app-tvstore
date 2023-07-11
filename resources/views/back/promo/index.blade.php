@@ -16,7 +16,7 @@
 
 
                         <div class="table-resposive">
-                            <table class="table">
+                            <table class="table table-resposive">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -32,14 +32,15 @@
                                         <tr>
                                             <td>{{ $promo->id }}</td>
                                             <td>{{ $promo->name }}</td>
+                                            <td>{{ $promo->description }}</td>
                                             <td>{{ $promo->start_date }}</td>
                                             <td>{{ $promo->end_date }}</td>
                                             <td>
-                                                <a href="{{ route('promo.show', [$promo->id]) }}">Show</a>
+                                                <a href="{{ route('promo.show', [$promo->id]) }}"><i class="fa-solid fa-eye" style="color: #0a64ff;"></i></a>
 
-                                                <a href="{{ route('promo.edit', [$promo->id]) }}">Edit</a>
+                                                <a href="{{ route('promo.edit', [$promo->id]) }}"><i class="fa-solid fa-pen-to-square" style="color: #1aff5e;"></i></a>
 
-                                                <a href="{{ route('promo.delete', [$promo->id]) }}">Delete</a>
+                                                <a href="{{ route('promo.delete', [$promo->id]) }}"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

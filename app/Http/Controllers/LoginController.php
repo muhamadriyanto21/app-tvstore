@@ -17,7 +17,7 @@ class LoginController extends Controller
     public function loginproses(Request $request)
     {
         if(Auth::attempt($request->only('email','password'))) {
-            return redirect('/dashboard');
+            return redirect('/admin/products');
         }
         return redirect('/login');
     }
