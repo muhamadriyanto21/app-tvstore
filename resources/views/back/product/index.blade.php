@@ -37,7 +37,7 @@
                                                 <img src="{{ asset('fotoproduct/'.$item->foto) }}" alt="">
 
                                             </td>
-                                            <td>{{ $item->price }}</td>
+                                            <td>Rp. {{ number_format($item->price) }}</td>
                                             <td>{{ $item->category->name }}</td>
                                             <td>
                                                 <a href="{{ route('product.edit', [$item->id]) }}">Edit</a>
