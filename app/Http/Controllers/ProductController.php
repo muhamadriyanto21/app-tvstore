@@ -21,19 +21,8 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            // tambahkan validasi lain yang diperlukan
-        ]);
 
-        $data = Product::create([
-            'name' => $request->name,
-            'price' => $request->price,
-            'description' => $request->description,
-            'foto' => 'foto.jpg',
-        ]);
+        $data = Product::create($request->all());
         if($request->hasFile('foto')) {
             $request->file('foto')->move('fotoproduct/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
@@ -51,11 +40,19 @@ class ProductController extends Controller
 
 
     public function update(Request $request, $id) {
-        Product::where('id', $id)->update([
-            'name' => $request->name,
-           'price' => $request->price,
-           'description' => $request->description,
-         ]);
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->description = $request->description;
+
+
+         if($request->hasFile('foto')) {
+            $request->file('foto')->move('fotoproduct/', $request->file('foto')->getClientOriginalName());
+            $product->foto = $request->file('foto')->getClientOriginalName();
+
+        }
+        $product->save();
+
         return redirect()->route('product.index');
     }
 
