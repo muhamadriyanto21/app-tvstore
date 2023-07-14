@@ -8,15 +8,32 @@
                     <div class="card-body">
                         <h4 class="card-title">Edit Product</h4>
 
-                        <form action="{{ route('product.update', [$product->id]) }}" method="post">
+                        <form action="{{ route('product.update', [$product->id]) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input class="form-control" type="text" name="name" id="name" value="{{ $product->name }}">
                             </div>
                             <div class="form-group">
+                                <label for="category_id">Category</label>
+                                <select class="form-control" name="category_id" id="category_id">
+                                    <option value="">Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option {{ $product->category_id == $category->id ? 'selected' : '' }} value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="name">Price</label>
                                 <input class="form-control" type="text" name="price" id="name" value="{{ $product->price }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Foto</label>
+                                <div class="d-flex">
+                                    <img class="img-fluid" style="max-width: 200px;" src="{{ asset('fotoproduct/'.$product->foto) }}" alt="">
+                                </div>
+                                <input class="form-control" type="file" name="foto" id="foto" value="{{ $product->foto }}">
+
                             </div>
                             <div class="form-group">
                                 <label for="name">Description</label>

@@ -36,14 +36,18 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+
         $product = Product::find($id);
-        return view('back.product.edit', compact('product'));
+        $categories = Category::all();
+        return view('back.product.edit', compact('product', 'categories'));
     }
 
 
     public function update(Request $request, $id) {
+
         $product = Product::find($id);
         $product->name = $request->name;
+        $product->category_id = $request->category_id;
         $product->price = $request->price;
         $product->description = $request->description;
 
