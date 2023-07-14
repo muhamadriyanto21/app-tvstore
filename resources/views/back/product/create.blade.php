@@ -8,15 +8,28 @@
                     <div class="card-body">
                         <h4 class="card-title">Create Product</h4>
 
-                        <form action="{{ route('product.store') }}" method="post">
+                        <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input class="form-control" type="text" name="name" id="name">
                             </div>
                             <div class="form-group">
+                                <label for="category_id">Category</label>
+                                <select class="form-control" name="category_id" id="category_id">
+                                    <option value="">Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="name">Price</label>
                                 <input class="form-control" type="text" name="price" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Upload Foto</label>
+                                <input class="form-control" type="file" name="foto" id="foto">
                             </div>
                             <div class="form-group">
                                 <label for="name">Description</label>

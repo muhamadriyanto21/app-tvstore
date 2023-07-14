@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
+            $table->integer('category_id');
             $table->string('name');
             $table->string('price');
             $table->text('description');
@@ -20,6 +21,8 @@ return new class extends Migration
             $table->timestamps();
         });
     }
+
+   
 
     /**
      * Reverse the migrations.

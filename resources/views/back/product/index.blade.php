@@ -15,14 +15,15 @@
 
 
 
-                        <div class="table-resposive">
+                        <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>id</th>
                                         <th>name</th>
+                                        <th>Foto</th>
                                         <th>Price</th>
-                                        <th>Description</th>
+                                        <th>Category</th>
                                         <th></th>
 
                                     </tr>
@@ -32,8 +33,12 @@
                                         <tr>
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->name }}</td>
+                                            <td>
+                                                <img src="{{ asset('fotoproduct/'.$item->foto) }}" alt="">
+
+                                            </td>
                                             <td>{{ $item->price }}</td>
-                                            <td>{{ $item->description }}</td>
+                                            <td>{{ $item->category->name }}</td>
                                             <td>
                                                 <a href="{{ route('product.edit', [$item->id]) }}">Edit</a>
 
