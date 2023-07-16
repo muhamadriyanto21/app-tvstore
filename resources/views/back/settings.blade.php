@@ -13,11 +13,25 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-10">
-                                <h5>Software Engineer</h5>
+                                Pekerjaan : <h5 id="job-title">Software Engineer</h5>
                             </div>
                             <div class="col-2">
-                                <i class="fa-solid fa-pen-to-square" style="color: #919cb1;"></i></h3>
+                                <i id="pen-icon" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;"></i></h3>
                             </div>
+
+                            <div class="col-12" id="input-container" style="display: none;">
+                                <div class="row">
+                                    <div class="col-sm-9 col-md-9 col-lg-9 mb-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="job-title-input" placeholder="Masukkan pekerjaan">
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <button id="save-button" class="btn btn-success"><i class="fa-solid fa-pencil"></i></button>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -45,8 +59,8 @@
                 </div>
 
                 <div class="jarak ml-3 mr-3">
-                    <h5>Email : muhamad.riyanto2025@gmail.com</h5>
-                    <h5>Password : 123</h5>
+                    <h5>Email : erakomputer@gmail.com</h5>
+                    <h5>Password : ujicoba</h5>
                 </div>
 
             </div>

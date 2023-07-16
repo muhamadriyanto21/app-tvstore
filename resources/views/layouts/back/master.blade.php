@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="{{ asset('back/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('back/images/favicon.png') }}" />
+  {{-- my css --}}
+  <link rel="stylesheet" href="{{ asset('back/css/mycss.css') }}">
+
 </head>
 <body>
   <div class="container-scroller">
@@ -363,7 +366,9 @@
   <!-- Custom js for this page-->
   <script src="{{ asset('back/js/dashboard.js') }}"></script>
   <script src="{{ asset('back/js/Chart.roundedBarCharts.js') }}"></script>
-  <!-- End custom js for this page-->
+    <!-- End custom js for this page-->
+    {{-- my javascript --}}
+    <script src="{{ asset('back/js/myjs.js') }}"></script>
 </body>
 
 </html>
