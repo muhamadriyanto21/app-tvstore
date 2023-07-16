@@ -1,3 +1,4 @@
+// function untuk ubah pekerjaan
 document.addEventListener("DOMContentLoaded", function() {
     // Mengambil elemen ikon menggunakan ID
     const penIcon = document.getElementById("pen-icon");
@@ -46,3 +47,40 @@ document.addEventListener("DOMContentLoaded", function() {
     saveButton.addEventListener("click", saveChanges);
 });
 
+// form settings
+document.addEventListener("DOMContentLoaded", function() {
+    const penIcon = document.getElementById("pen-icon1");
+    const inputContainer = document.getElementById("input-container1");
+    const emailText = document.getElementById("email-text1");
+    const passwordText = document.getElementById("password-text1");
+    const emailInput = document.getElementById("email-input1");
+    const passwordInput = document.getElementById("password-input1");
+    const saveButton = document.getElementById("save-button1");
+    const cancelButton = document.getElementById("cancel-button1");
+
+    function toggleInput() {
+        if (inputContainer.style.display === "none") {
+            inputContainer.style.display = "block";
+            emailInput.value = emailText.textContent;
+            passwordInput.value = passwordText.textContent;
+        } else {
+            inputContainer.style.display = "none";
+        }
+    }
+
+    function saveChanges() {
+        const newEmail = emailInput.value;
+        const newPassword = passwordInput.value;
+        emailText.textContent = newEmail;
+        passwordText.textContent = newPassword;
+        toggleInput();
+    }
+
+    function cancelEdit() {
+        toggleInput();
+    }
+
+    penIcon.addEventListener("click", toggleInput);
+    saveButton.addEventListener("click", saveChanges);
+    cancelButton.addEventListener("click", cancelEdit);
+});

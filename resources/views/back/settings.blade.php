@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                         <button id="save-button" class="btn btn-success"><i class="fa-solid fa-pencil"></i></button>
-                                        
+
                                     </div>
 
                                 </div>
@@ -54,17 +54,31 @@
                         <h3>Account Settings</h3>
                     </div>
                     <div class="col-1">
-                        <i class="fa-solid fa-pen-to-square" style="color: #919cb1;"></i>
+                        <i id="pen-icon1" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;"></i>
+                    </div>
+                    <div class="col-12" id="input-container1" style="display: none;">
+                        <div class="row">
+                            <div class="col-sm-9 col-md-9 col-lg-9 mb-2 mb-sm-0">
+                                <input type="email" class="form-control" id="email-input1" placeholder="Masukkan Email">
+                                <input type="password" class="form-control mt-2" id="password-input1" placeholder="Masukkan Password">
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <button id="save-button1" class="btn btn-success"><i class="fa-solid fa-pencil"></i></button>
+                                <button id="cancel-button1" class="btn btn-secondary ml-2">Batal</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="jarak ml-3 mr-3">
-                    <h5>Email : erakomputer@gmail.com</h5>
-                    <h5>Password : ujicoba</h5>
+                    Email : <h5 id="email-text1">erakomputer@gmail.com</h5>
+                    Password : <h5 id="password-text1">ujicoba</h5>
                 </div>
-
             </div>
         </div>
     </div>
+
+
+
 </div>
 @endsection
