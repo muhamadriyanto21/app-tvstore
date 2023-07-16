@@ -1,51 +1,68 @@
 // function untuk ubah pekerjaan
 document.addEventListener("DOMContentLoaded", function() {
-    // Mengambil elemen ikon menggunakan ID
     const penIcon = document.getElementById("pen-icon");
-
-    // Mengambil elemen teks pekerjaan menggunakan ID
     const jobTitle = document.getElementById("job-title");
-
-    // Mengambil elemen input container menggunakan ID
     const inputContainer = document.getElementById("input-container");
-
-    // Mengambil elemen input pekerjaan menggunakan ID
     const jobTitleInput = document.getElementById("job-title-input");
-
-    // Mengambil elemen tombol simpan menggunakan ID
     const saveButton = document.getElementById("save-button");
 
-
-    // Fungsi untuk menampilkan input dan menyembunyikan teks
-    function showInput() {
-        // Menyembunyikan teks pekerjaan
-        jobTitle.style.display = "none";
-
-        // Menampilkan input dan tombol simpan
-        inputContainer.style.display = "block";
+    // Fungsi untuk menyimpan data ke Local Storage
+    function saveDataToLocalStorage() {
+        localStorage.setItem("jobTitle", jobTitle.textContent);
     }
 
-    // Fungsi untuk menyimpan perubahan dan menampilkan teks
+    // Fungsi untuk memuat data dari Local Storage
+    function loadDataFromLocalStorage() {
+        const savedJobTitle = localStorage.getItem("jobTitle");
+
+        if (savedJobTitle) {
+            jobTitle.textContent = savedJobTitle;
+        }
+    }
+
+    // Fungsi untuk menampilkan form input
+    function toggleInput() {
+        if (inputContainer.style.display === "none") {
+            inputContainer.style.display = "block";
+            jobTitleInput.value = jobTitle.textContent;
+            jobTitleInput.focus();
+        } else {
+            inputContainer.style.display = "none";
+        }
+    }
+
+    // Fungsi untuk menyimpan perubahan
     function saveChanges() {
-        // Mendapatkan nilai input pekerjaan
         const newJobTitle = jobTitleInput.value;
-
-        // Mengubah teks pekerjaan dengan nilai input pengguna
         jobTitle.textContent = newJobTitle;
-
-        // Menampilkan teks pekerjaan
-        jobTitle.style.display = "block";
-
-        // Menyembunyikan input dan tombol simpan
-        inputContainer.style.display = "none";
+        saveDataToLocalStorage();
+        toggleInput();
     }
 
-    // Panggil fungsi showInput() saat ikon pena di klik
-    penIcon.addEventListener("click", showInput);
+    // Fungsi untuk membatalkan perubahan
+    function cancelEdit() {
+        toggleInput();
+    }
 
-    // Panggil fungsi saveChanges() saat tombol simpan di klik
+    // Panggil fungsi untuk memuat data dari Local Storage
+    loadDataFromLocalStorage();
+
+    // Tambahkan event listener ke tombol dan ikon
+    penIcon.addEventListener("click", toggleInput);
     saveButton.addEventListener("click", saveChanges);
+    jobTitleInput.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            saveChanges();
+        }
+    });
+    jobTitleInput.addEventListener("blur", saveChanges);
+    jobTitleInput.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            cancelEdit();
+        }
+    });
 });
+
 
 // form settings
 document.addEventListener("DOMContentLoaded", function() {
@@ -58,6 +75,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const saveButton = document.getElementById("save-button1");
     const cancelButton = document.getElementById("cancel-button1");
 
+    // Fungsi untuk menyimpan data ke Local Storage
+    function saveDataToLocalStorage() {
+        localStorage.setItem("email", emailText.textContent);
+        localStorage.setItem("password", passwordText.textContent);
+    }
+
+    // Fungsi untuk memuat data dari Local Storage
+    function loadDataFromLocalStorage() {
+        const savedEmail = localStorage.getItem("email");
+        const savedPassword = localStorage.getItem("password");
+
+        if (savedEmail) {
+            emailText.textContent = savedEmail;
+        }
+
+        if (savedPassword) {
+            passwordText.textContent = savedPassword;
+        }
+    }
+
+    // Fungsi untuk menampilkan form input
     function toggleInput() {
         if (inputContainer.style.display === "none") {
             inputContainer.style.display = "block";
@@ -68,19 +106,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Fungsi untuk menyimpan perubahan
     function saveChanges() {
         const newEmail = emailInput.value;
         const newPassword = passwordInput.value;
         emailText.textContent = newEmail;
         passwordText.textContent = newPassword;
+        saveDataToLocalStorage();
         toggleInput();
     }
 
+    // Fungsi untuk membatalkan perubahan
     function cancelEdit() {
         toggleInput();
     }
 
+    // Panggil fungsi untuk memuat data dari Local Storage
+    loadDataFromLocalStorage();
+
+    // Tambahkan event listener ke tombol dan ikon
     penIcon.addEventListener("click", toggleInput);
     saveButton.addEventListener("click", saveChanges);
     cancelButton.addEventListener("click", cancelEdit);
 });
+
