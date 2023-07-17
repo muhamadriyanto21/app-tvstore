@@ -130,3 +130,48 @@ document.addEventListener("DOMContentLoaded", function() {
     cancelButton.addEventListener("click", cancelEdit);
 });
 
+// i will add fitur change image if botton pencil to click
+document.addEventListener("DOMContentLoaded", function() {
+    const penIcon = document.getElementById("pen-icon-for-change-image");
+    const fileInput = document.getElementById("file-input-for-change-image");
+    const profileImg = document.getElementById("profile-img");
+
+    // Memuat foto yang tersimpan dalam Local Storage saat halaman dimuat
+    loadProfileImage();
+
+    // Tambahkan event listener untuk ikon pena
+    penIcon.addEventListener("click", function() {
+        fileInput.click();
+    });
+
+    // Tambahkan event listener untuk perubahan file input
+    fileInput.addEventListener("change", function() {
+        if (fileInput.files && fileInput.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                // Mengganti atribut src gambar dengan data URL yang dibaca dari file
+                profileImg.setAttribute("src", e.target.result);
+
+                // Simpan foto baru ke Local Storage
+                saveProfileImage(e.target.result);
+            };
+
+            // Membaca file sebagai URL data
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    });
+
+    // Fungsi untuk menyimpan foto ke Local Storage
+    function saveProfileImage(imageData) {
+        localStorage.setItem("profileImage", imageData);
+    }
+
+    // Fungsi untuk memuat foto dari Local Storage
+    function loadProfileImage() {
+        const storedImage = localStorage.getItem("profileImage");
+        if (storedImage) {
+            profileImg.setAttribute("src", storedImage);
+        }
+    }
+});

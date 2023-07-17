@@ -24,6 +24,8 @@
   <link rel="shortcut icon" href="{{ asset('back/images/favicon.png') }}" />
   {{-- my css --}}
   <link rel="stylesheet" href="{{ asset('back/css/mycss.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 
 </head>
 <body>

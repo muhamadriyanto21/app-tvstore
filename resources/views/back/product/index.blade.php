@@ -24,7 +24,7 @@
                                         <th>Foto</th>
                                         <th>Price</th>
                                         <th>Category</th>
-                                        <th></th>
+                                        <th>Aksi</th>
 
                                     </tr>
                                 </thead>
@@ -46,7 +46,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                   
+
 
                                 </tbody>
                             </table>

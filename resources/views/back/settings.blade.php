@@ -5,8 +5,15 @@
     <div class="jumbotron ml-2 mr-3 mt-4">
         <div class="row">
             <div class="col-lg-4 col-sm-12">
-                <img src="{{ asset('back/images/faces/ryan.jpeg') }}" class="img-thumbnail rounded" style="width: 300px; height: 300px;" alt="...">
+                <div class="position-relative">
+                    <i id="pen-icon-for-change-image" class="fa-solid fa-pen-to-square" style="color: #ffffff; font-shadow: 0,0,0,0.8 black; cursor: pointer; position: absolute; top: 7%; left: 92%; transform: translate(-50%, -50%);" title="ganti foto"></i>
+                    <img id="profile-img" src="" class="img-thumbnail rounded" style="width: 300px; height: 300px;" alt="...">
+                    <input type="file" id="file-input-for-change-image" class="file-input" accept="image/*" style="display: none;">
+                </div>
             </div>
+
+
+
             <div class="col-7">
                 <h2 class="mt-5">{{ Auth::user()->name }}</h2>
                 <div class="card">
@@ -16,7 +23,7 @@
                                 Pekerjaan : <h5 id="job-title">Software Engineer</h5>
                             </div>
                             <div class="col-2">
-                                <i id="pen-icon" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;"></i></h3>
+                                <i id="pen-icon" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;" title="Edit Nama Pekerjaan"></i>
                             </div>
 
                             <div class="col-12" id="input-container" style="display: none;">
@@ -47,14 +54,14 @@
                 <h6>Account</h6>
             </div>
         </div>
-        <div class="col-lg-9 col-sm-12">
+        <div class="col-lg-9 col-sm-12 mt-2 mb-2">
             <div class="card">
                 <div class="row">
                     <div class="col-10 ml-3 mr-3">
                         <h3>Account Settings</h3>
                     </div>
                     <div class="col-1">
-                        <i id="pen-icon1" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;"></i>
+                        <i id="pen-icon1" class="fa-solid fa-pen-to-square" style="color: #919cb1; cursor: pointer;" title="Edit Account"></i>
                     </div>
                     <div class="col-12" id="input-container1" style="display: none;">
                         <div class="row">
