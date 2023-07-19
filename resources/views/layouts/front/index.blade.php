@@ -210,6 +210,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="{{asset('front/js/gmaps.min.js')}}"></script>
 	<script src="{{ asset('front/js/main.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script>
     function togglePasswordVisibility() {
         var passwordInput = document.getElementById("password");

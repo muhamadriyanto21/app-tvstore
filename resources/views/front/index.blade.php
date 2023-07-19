@@ -13,13 +13,14 @@
         <div class="row fullscreen align-items-center justify-content-start">
             <div class="col-lg-12">
                 <div class="active-banner-slider owl-carousel">
+
                     <!-- single-slide -->
+                    @foreach ($banners as $banner)
                     <div class="row single-slide align-items-center d-flex">
                         <div class="col-lg-5 col-md-6">
                             <div class="banner-content">
-                                <h1>Nike New <br>Collection!</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                <h1>{{ $banner->name }}</h1>
+                                <p>{{ $banner->description }}</p>
                                     <div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><i class="fa-solid fa-plus" style="color: #ffffff; margin-top: 18px;"></i></a>
 										<span class="add-text text-uppercase">Add to Bag</span>
@@ -28,29 +29,14 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="banner-img">
-                                <img class="img-fluid" src="{{ asset('front/img/banner/banner-img.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('fotoproduct/'.$banner->foto) }}" alt="">
                             </div>
                         </div>
                     </div>
+                    @endforeach
+
                     <!-- single-slide -->
-                    <div class="row single-slide">
-                        <div class="col-lg-5">
-                            <div class="banner-content">
-                                <h1>Nike New <br>Collection!</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                                <div class="add-bag d-flex align-items-center">
-                                    <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-                                    <span class="add-text text-uppercase">Add to Bag</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="banner-img">
-                                <img class="img-fluid" src="{{ asset('front/img/banner/banner-img.png') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -201,19 +187,34 @@
                         <div class="product-details">
                             <h6>{{ $item->name }}</h6>
                             <div class="price">
-                                <h6>{{ $item->price }}</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                @if(count($item->promos))
+                                @php
+                                    $price_final = 0;
+                                    $price_curr = $item->price;
+                                @endphp
+                                @foreach ($item->promos as $promo)
+                                    @php
+                                        $price_curr = $price_curr * (100 - $promo->discount) / 100;
+
+
+                                    @endphp
+                                @endforeach
+                                    <h6>Rp {{ number_format($price_curr) }}</h6>
+                                    <h6 class="l-through">Rp {{ number_format($item->price) }}</h6>
+                                @else
+                                <h6>Rp {{ number_format($item->price)}}</h6>
+                                @endif
                             </div>
                             <div class="prd-bottom">
 
-                                <a href="" class="social-info">
+                                {{-- <a href="" class="social-info">
                                     <span class="ti-bag"></span>
                                     <p class="hover-text">add to bag</p>
                                 </a>
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-heart"></span>
                                     <p class="hover-text">Wishlist</p>
-                                </a>
+                                </a> --}}
                                 {{-- <a href="" class="social-info">
                                     <span class="lnr lnr-sync"></span>
                                     <p class="hover-text">compare</p>
@@ -274,14 +275,14 @@
                             </div>
                             <div class="prd-bottom">
 
-                                <a href="" class="social-info">
+                                {{-- <a href="" class="social-info">
                                     <span class="ti-bag"></span>
                                     <p class="hover-text">add to bag</p>
                                 </a>
                                 <a href="" class="social-info">
                                     <span class="lnr lnr-heart"></span>
                                     <p class="hover-text">Wishlist</p>
-                                </a>
+                                </a> --}}
                                 {{-- <a href="" class="social-info">
                                     <span class="lnr lnr-sync"></span>
                                     <p class="hover-text">compare</p>

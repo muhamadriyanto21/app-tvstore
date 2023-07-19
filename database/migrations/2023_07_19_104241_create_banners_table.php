@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('promos', function (Blueprint $table) {
-            $table->id();
+        Schema::create('banners', function (Blueprint $table) {
+            $table->id()->autoIncrement();
             $table->string('name');
-            $table->integer('discount');
-            $table->text('description');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->string('description');
+            $table->string('foto');
             $table->timestamps();
         });
     }
@@ -25,8 +23,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('promos');
+        Schema::dropIfExists('banners');
     }
 };

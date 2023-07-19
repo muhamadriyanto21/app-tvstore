@@ -24,6 +24,16 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label for="promo_id">Promo</label>
+                                <select class="form-control select_2" name="promo_id[]" multiple id="promo_id">
+                                    <option value="">Select Promo</option>
+                                    @foreach ($promos as $promo)
+                                        <option value="{{ $promo->id }}">{{ $promo->name }}</option>
+                                    @endforeach
+                                </select>
+
+                            </div>
+                            <div class="form-group">
                                 <label for="name">Price</label>
                                 <input class="form-control" type="text" name="price" id="name">
                             </div>
@@ -35,6 +45,7 @@
                                 <label for="name">Description</label>
                                 <textarea class="form-control" name="description" id="" cols="30" rows="10" name="description"></textarea>
                             </div>
+
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -43,4 +54,9 @@
         </div>
 
     </div>
+@endsection
+@section('content-js')
+    <script>
+        $('.select_2').select2()
+    </script>
 @endsection

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('back/vendors/feather/feather.css') }}">
+  <link rel="stylesheet" href="{{ asset('back/vendors/select2/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('back/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('back/vendors/ti-icons/css/themify-icons.css') }}">
   <link rel="stylesheet" href="{{ asset('back/vendors/css/vendor.bundle.base.css') }}">
   <!-- endinject -->
@@ -316,7 +318,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('product.index') }}">
-              <i class="icon-grid menu-icon"></i>
+              <i class="icon-box menu-icon"></i>
               <span class="menu-title">Products</span>
             </a>
           </li>
@@ -324,6 +326,12 @@
             <a class="nav-link" href="{{ route('promo.index') }}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Promo</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('banner.index') }}">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Banner</span>
             </a>
           </li>
 
@@ -371,6 +379,10 @@
     <!-- End custom js for this page-->
     {{-- my javascript --}}
     <script src="{{ asset('back/js/myjs.js') }}"></script>
+    {{-- content js --}}
+    <script src="{{ asset('back/vendors/select2/select2.min.js') }}"></script>
+    @yield('content-js')
+
 </body>
 
 </html>

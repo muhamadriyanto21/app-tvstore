@@ -29,8 +29,7 @@ class PromoController extends Controller
 
         Promo::create($request->all());
 
-        return redirect()->route('promo.index')
-            ->with('success', 'Promo created successfully.');
+        return redirect()->route('promo.index');
     }
 
     public function show(Promo $promo)

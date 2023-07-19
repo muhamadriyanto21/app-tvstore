@@ -21,6 +21,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Name</th>
+                                        <th>Discount</th>
                                         <th>Description</th>
                                         <th>Start Date</th>
                                         <th>End Date</th>
@@ -32,6 +33,7 @@
                                         <tr>
                                             <td>{{ $promo->id }}</td>
                                             <td>{{ $promo->name }}</td>
+                                            <td>{{ $promo->discount }}</td>
                                             <td>{{ $promo->description }}</td>
                                             <td>{{ $promo->start_date }}</td>
                                             <td>{{ $promo->end_date }}</td>

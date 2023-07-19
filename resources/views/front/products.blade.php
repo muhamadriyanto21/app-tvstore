@@ -28,102 +28,13 @@
 				<div class="sidebar-categories">
 					<div class="head">Browse Categories</div>
 					<ul class="main-categories">
-						<li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-								 class="lnr lnr-arrow-right"></span>Sepatu Pria<span class="number">(53)</span></a>
-							{{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-							</ul> --}}
-						</li>
-                        <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                            class="lnr lnr-arrow-right"></span>Sepatu Wanita<span class="number">(53)</span></a>
-                       {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                           <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                           <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                       </ul> --}}
-                        </li>
-                        <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                            class="lnr lnr-arrow-right"></span>Olahraga & Outdoor<span class="number">(53)</span></a>
-                    {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                        <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                        <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                    </ul> --}}
-                    </li>
-                    <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                        class="lnr lnr-arrow-right"></span>Jam Tangan<span class="number">(53)</span></a>
-                            {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                                <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                            </ul> --}}
-                    </li>
-                    <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                        class="lnr lnr-arrow-right"></span>Tas Pria<span class="number">(53)</span></a>
-                            {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                                <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                            </ul> --}}
-                    </li>
-                    <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                        class="lnr lnr-arrow-right"></span>Tas Wanita<span class="number">(53)</span></a>
-                            {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                                <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                            </ul> --}}
-                    </li>
-                    <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                        class="lnr lnr-arrow-right"></span>Pakaian Pria<span class="number">(53)</span></a>
-                            {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                                <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                            </ul> --}}
-                    </li>
-                    <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
-                        class="lnr lnr-arrow-right"></span>Aksesoris<span class="number">(53)</span></a>
-                            {{-- <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-                                <li class="main-nav-list child"><a href="#">Sepatu Wanita<span class="number">(13)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Olahraga & Outdoor<span class="number">(09)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Jam Tangan<span class="number">(17)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Pria<span class="number">(01)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Tas Wanita<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Pakaian Pria<span class="number">(11)</span></a></li>
-                                <li class="main-nav-list child"><a href="#">Aksesoris<span class="number">(11)</span></a></li>
-                            </ul> --}}
-                    </li>
+                        @foreach ( $categories as $category )
+                            <li class="main-nav-list"><a  href="#fruitsVegetable" ><span
+                                class="lnr lnr-arrow-right"></span>{{ $category->name }}<span class="number">(53)</span></a>
+                            </li>
+                        @endforeach
+
+
 
 
 					</ul>
@@ -229,17 +140,10 @@
 								</div>
 							</div>
 						</div>
-						<!-- single product -->
-
-						<!-- single product -->
-
-						<!-- single product -->
-
-						<!-- single product -->
-
-						<!-- single product -->
                         @endforeach
+
 					</div>
+
 				</section>
 				<!-- End Best Seller -->
 				<!-- Start Filter Bar -->

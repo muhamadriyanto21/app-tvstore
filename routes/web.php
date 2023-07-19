@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PromoController;
+use App\Http\Controllers\BannerController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
 Route::get('/dashboard/create', [ProductController::class, 'create'])->name('dashboard.create');
@@ -58,6 +59,17 @@ Route::get('/admin/promos/{id}/edit', [PromoController::class, 'edit'])->name('p
 Route::post('/admin/promos/{id}/update', [PromoController::class, 'update'])->name('promo.update');
 Route::get('/admin/promos/{id}/delete', [PromoController::class, 'destroy'])->name('promo.delete');
 });
+
+Route::middleware(['auth'])->group(function () {
+    // fitur crud promo
+    Route::get('/admin/banner', [BannerController::class, 'index'])->name('banner.index');
+    Route::get('/admin/banner/create', [BannerController::class, 'create'])->name('banner.create');
+    Route::get('/admin/banner/show', [BannerController::class, 'show'])->name('banner.show');
+    Route::post('/admin/banner/store', [BannerController::class, 'store'])->name('banner.store');
+    Route::get('/admin/banner/{id}/edit', [BannerController::class, 'edit'])->name('banner.edit');
+    Route::post('/admin/banner/{id}/update', [BannerController::class, 'update'])->name('banner.update');
+    Route::get('/admin/banner/{id}/delete', [BannerController::class, 'destroy'])->name('banner.delete');
+    });
 
 
 Route::get('/login', [LoginController::class, 'login'])->name('front.login');

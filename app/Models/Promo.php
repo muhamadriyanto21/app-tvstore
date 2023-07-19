@@ -12,9 +12,12 @@ class Promo extends Model
     protected $fillable = [
         'name',
         'description',
+        'discount',
         'start_date',
         'end_date',
         // tambahkan kolom lain yang diperlukan
+        // promo dan product many to many
+        
     ];
 
 }

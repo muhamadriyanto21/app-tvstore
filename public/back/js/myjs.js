@@ -130,33 +130,27 @@ document.addEventListener("DOMContentLoaded", function() {
     cancelButton.addEventListener("click", cancelEdit);
 });
 
-// i will add fitur change image if botton pencil to click
+// these will add fitur change image if botton pencil to click
 document.addEventListener("DOMContentLoaded", function() {
     const penIcon = document.getElementById("pen-icon-for-change-image");
     const fileInput = document.getElementById("file-input-for-change-image");
     const profileImg = document.getElementById("profile-img");
-
     // Memuat foto yang tersimpan dalam Local Storage saat halaman dimuat
     loadProfileImage();
-
     // Tambahkan event listener untuk ikon pena
     penIcon.addEventListener("click", function() {
         fileInput.click();
     });
-
     // Tambahkan event listener untuk perubahan file input
     fileInput.addEventListener("change", function() {
         if (fileInput.files && fileInput.files[0]) {
             const reader = new FileReader();
-
             reader.onload = function(e) {
                 // Mengganti atribut src gambar dengan data URL yang dibaca dari file
                 profileImg.setAttribute("src", e.target.result);
-
                 // Simpan foto baru ke Local Storage
                 saveProfileImage(e.target.result);
             };
-
             // Membaca file sebagai URL data
             reader.readAsDataURL(fileInput.files[0]);
         }
@@ -174,4 +168,15 @@ document.addEventListener("DOMContentLoaded", function() {
             profileImg.setAttribute("src", storedImage);
         }
     }
+});
+
+// mengaitkan pembelian ke whatsapp
+document.getElementById('whatsappButton').addEventListener('click', function() {
+    var phoneNumber = '085711923056'; // Nomor telepon penerima WhatsApp
+
+    // Buat URL dengan nomor telepon dan pesan default (opsional)
+    var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=Halo%20saya%20ingin%20bertanya%20tentang%20produk';
+
+    // Buka URL WhatsApp di jendela baru
+    window.open(url, '_blank');
 });

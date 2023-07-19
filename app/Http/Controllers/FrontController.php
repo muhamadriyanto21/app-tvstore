@@ -4,19 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
+use App\Models\Banner;
 
 class FrontController extends Controller
 {
     public function index()
     {
         $products = Product::all();
-        return view('front.index', compact('products'));
+        $banners = Banner::all();
+        return view('front.index', compact('products', 'banners'));
     }
 
     public function products()
     {
         $products = Product::all();
-        return view('front.products', compact('products'));
+        $categories = Category::all();
+        return view('front.products', compact('products', 'categories'));
     }
 
     public function contact()

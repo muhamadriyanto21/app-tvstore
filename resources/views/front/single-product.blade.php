@@ -52,7 +52,7 @@
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
+							<a class="primary-btn" id="whatsappButton"><i class="fa-brands fa-whatsapp"></i> Beli</a>
 							{{-- <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a> --}}
 						</div>
