@@ -168,15 +168,6 @@ document.addEventListener("DOMContentLoaded", function() {
             profileImg.setAttribute("src", storedImage);
         }
     }
-});
 
-// mengaitkan pembelian ke whatsapp
-document.getElementById('whatsappButton').addEventListener('click', function() {
-    var phoneNumber = '085711923056'; // Nomor telepon penerima WhatsApp
 
-    // Buat URL dengan nomor telepon dan pesan default (opsional)
-    var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=Halo%20saya%20ingin%20bertanya%20tentang%20produk';
-
-    // Buka URL WhatsApp di jendela baru
-    window.open(url, '_blank');
 });
